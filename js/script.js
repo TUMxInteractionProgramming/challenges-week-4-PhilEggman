@@ -1,32 +1,61 @@
 /* #6 start the #external #action and say hello */
 console.log("App is alive");
 
+var currentChannel;
+
+console.log (hallo);
+
+var currentLocation = {
+    longitude: 11.537186,
+    latitude: 48.1653757,
+    what3words: 'teile.wünsche.augenlid'
+};
+
+console.log(currentChannel);
+console.log ("currentLocation", currentLocation);
+
 /**
  * #6 #Switcher function for the #channels name in the right app bar
  * @param channelName Text which is set
  */
 function switchChannel(channelName) {
+   
+
+    //console.log("currentChannel", currentChannel);
+   
     //Log the channel switch
     console.log("Tuning in to channel", channelName);
 
     //Write the new channel to the right app bar
-    document.getElementById('channel-name').innerHTML = channelName;
+    document.getElementById('channel-name').innerHTML = channelName.name;
 
     //#6 change the #channel #location
-    document.getElementById('channel-location').innerHTML = 'by <a href="http://w3w.co/upgrading.never.helps" target="_blank"><strong>upgrading.never.helps</strong></a>';
+    document.getElementById('channel-location').innerHTML = channelName.location;
 
     /* #6 #liking channels on #click */
-    $('#channel-star').attr('src', 'http://ip.lfe.mw.tum.de/sections/star-o.png');
+    (channelName.starred == true) ?
+    $('#channel-star').attr('class', 'fas fa-star') :
+    $('#channel-star').attr('class', 'far fa-star')
+   
 
     /* #6 #highlight the selected #channel.
        This is inefficient (jQuery has to search all channel list items), but we'll change it later on */
     $('#channels li').removeClass('selected');
-    $('#channels li:contains(' + channelName + ')').addClass('selected');
+    $('#channels li:contains(' + channelName.name + ')').addClass('selected');
+
+
 }
 
 /* #6 #liking a channel on #click */
 function star() {
-    $('#channel-star').attr('src', 'http://ip.lfe.mw.tum.de/sections/star.png');
+    $('#channel-star').toggleClass('fas fa-star');
+    $('#channel-star').toggleClass('far fa-star');
+    
+     element = document.getElementById('channel-star');
+     className = element.className;
+
+    console.log(currentChannel.starred);
+    
 }
 
 /**
@@ -51,3 +80,4 @@ function toggleEmojis() {
     /* $('#emojis').show(); // #show */
     $('#emojis').toggle(); // #toggle
 }
+

@@ -129,8 +129,9 @@ li .channel-meta {
     top: 12px;
 }
 
-li img {
+li i {
     vertical-align: middle;
+    font-size: 24px;
 }
 
 li.selected {
@@ -172,7 +173,7 @@ li.selected {
     border-bottom: 4px solid #3F51B5;
 }
 
-#tab-bar button img {
+#tab-bar button i {
     display: block;
     margin: 0 auto 4px auto;
 }
