@@ -20,7 +20,9 @@
     <script src="js/script.js"></script>
     <script src="js/channels.js"></script>
 </head>
-<body>
+
+<!-- <bodyonload="listChannls()"> -->
+<body> 
 
 <!-- channel area -->
 <div id="channels">
@@ -39,17 +41,21 @@
             <!-- #5 #channels #icons now grouped in .channel-meta span -->
             <span class="channel-meta">
                 <i class="far fa-star"></i>
+                <span>100 min</span>
+                <span>999 new</span>
                 <!-- #5 #channels #icons now with chevron -->
                 <i class="fas fa-chevron-right"></i>
 
             </span>
         </li>
-        <!-- #6 #channels #click calls our switchChannel with the corresponding name as an argument -->
+        <!-- #6 #channels #cl  ick calls our switchChannel with the corresponding name as an argument -->
         <li class="selected" onclick="switchChannel(sevenContinents)">
             #SevenContinents
             <!-- #5 #channels #icons now grouped in .channel-meta span -->
             <span class="channel-meta">
                 <i class="fas fa-star"></i>
+                <span>100 min</span>
+                <span>999 new</span>
                 <!-- #5 #channels #icons now with chevron -->
                 <i class="fas fa-chevron-right"></i>
 
@@ -61,6 +67,8 @@
             <!-- #5 #channels #icons now grouped in .channel-meta span -->
             <span class="channel-meta">
                 <i class="far fa-star"></i>
+                <span>100 min</span>
+                <span>999 new</span>
                 <!-- #5 #channels #icons now with chevron -->
                 <i class="fas fa-chevron-right"></i>
 
@@ -72,6 +80,8 @@
             <!-- #5 #channels #icons now grouped in .channel-meta span -->
             <span class="channel-meta">
                 <i class="fas fa-star"></i>
+                <span>100 min</span>
+                <span>999 new</span>
                 <!-- #5 #channels #icons now with chevron -->
                 <i class="fas fa-chevron-right"></i>
 
@@ -83,11 +93,14 @@
             <!-- #5 #channels #icons now grouped in .channel-meta span -->
             <span class="channel-meta">
                 <i class="far fa-star"></i>
+                <span>100 min</span>
+                <span>999 new</span>
                 <!-- #5 #channels #icons now with chevron -->
                 <i class="fas fa-chevron-right"></i>
 
             </span>
         </li>
+
 
     </ul>
 
@@ -166,13 +179,18 @@
             <p>北京</p>
             <button>+5 min.</button>
         </div>
-
     </div>
 
     <!-- #5 #smileys #insert the chat-bar -->
     <div id="chat-bar"> <!-- #6 #smile #show the menu on click -->
         <button id="emojis-button" onclick="toggleEmojis()"><img src="http://ip.lfe.mw.tum.de/sections/smile-o.png" alt="Smiley"></button>
         <div id="emojis">&#x1F601; &#x1F602; &#x1F603; &#x1F604; &#x1F605; &#x1F606; &#x1F607;</div>
+
+        <!-- #8 space for writing a new Message -->
+        <input id="input-message" type="text" name="new-message" placeholder="Message..." maxlength="140">
+
+        <!-- #8 button to send a new Message -->
+        <button id="send-button" onclick="sendMessage();"><i class="fas fa-arrow-right"></i></button>
     </div>
 </div>
 

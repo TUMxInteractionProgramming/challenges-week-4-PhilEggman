@@ -1,4 +1,3 @@
-var hallo = 1;
 
  var yummy = {
     name: '#Yummy',

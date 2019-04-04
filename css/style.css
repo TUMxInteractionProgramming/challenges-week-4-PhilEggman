@@ -129,9 +129,21 @@ li .channel-meta {
     top: 12px;
 }
 
+/* #7 styling the star in chevron in the channel list */
 li i {
     vertical-align: middle;
     font-size: 24px;
+}
+
+/* #8 styling the new boxes expiresIn and messageCount */
+li span span {
+    vertical-align: middle;
+    font-size: small;
+    background-color: #3F51B5;
+    color: white;
+    padding: 2px;
+    margin: 2px;
+    border-radius: 2px;
 }
 
 li.selected {
@@ -212,6 +224,24 @@ li.selected {
     display: none;
 }
 
+/* #8 styles the input for a new message */
+input {
+    border: none;
+    font-size: medium;
+    flex-basis: 78%;
+}
+
+/* #8 position of the send button */
+#send-button {
+    position: absolute;
+    right: 5px;
+}
+
+/* #8 the size of the right arrow which is the send button */
+#send-button i {
+    font-size: 24px;
+}
+
 /* MESSAGES */
 
 .message {
@@ -271,3 +301,4 @@ li.selected {
 .message.own {
     margin-left: 17.5%;
 }
+
